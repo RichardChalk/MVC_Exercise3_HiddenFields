@@ -1,0 +1,18 @@
+﻿@model HiddenFields.Viewmodels.IndexViewModel
+
+@{
+    ViewData["Title"] = "Counter";
+
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Nu har sidan laddats om @Model.Counter gånger</p>
+</div>
+
+<div class="text-center">
+    <form method="post">
+        <input value="@Model.Counter" asp-for="@Model.Counter" hidden/>
+        <button type="submit" class="btn btn-primary">Klicka här för att ladda om sidan</button>
+    </form>
+</div>
